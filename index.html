@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elijah Künstler — Strategic Creative Producer</title>
+  <meta name="description" content="Elijah Künstler — Strategic Creative Producer of Brand Media Packaging. Bilingual-ready portfolio for brands, agencies, and public figures." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root,[data-theme="light"]{
+      --text-xs:clamp(.75rem,.7rem + .25vw,.875rem);
+      --text-sm:clamp(.875rem,.8rem + .35vw,1rem);
+      --text-base:clamp(1rem,.95rem + .25vw,1.125rem);
+      --text-lg:clamp(1.125rem,1rem + .75vw,1.5rem);
+      --text-xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);
+      --text-2xl:clamp(2.15rem,1.2rem + 3vw,4.2rem);
+      --text-3xl:clamp(3.4rem,1.5rem + 6vw,7.2rem);
+      --space-1:.25rem;--space-2:.5rem;--space-3:.75rem;--space-4:1rem;--space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;--space-12:3rem;--space-16:4rem;--space-20:5rem;--space-24:6rem;--space-32:8rem;
+      --color-bg:#f6f3f0;--color-surface:#fbf8f5;--color-surface-2:#f1ece7;--color-surface-offset:#e8e1db;--color-divider:#d7d0c9;--color-border:#cfc7bf;--color-text:#0b1014;--color-text-muted:#525960;--color-text-faint:#888986;--color-text-inverse:#faf7f4;--color-primary:#ffccd8;--color-primary-2:#ffdfe6;--color-primary-highlight:#fff1f5;
+      --radius-sm:.375rem;--radius-md:.625rem;--radius-lg:1rem;--radius-xl:1.375rem;--shadow-sm:0 1px 2px oklch(.2 .01 80 / .06);--shadow-md:0 16px 40px oklch(.2 .01 80 / .09);--transition:220ms cubic-bezier(.16,1,.3,1);
+      --content-default:1120px;--content-wide:1360px;--font-display:'DM Serif Display', Georgia, serif;--font-body:'Inter', sans-serif;--font-mono:'IBM Plex Mono', monospace;
+    }
+    [data-theme="dark"]{--color-bg:#0d1013;--color-surface:#14181c;--color-surface-2:#191e24;--color-surface-offset:#222932;--color-divider:#2b323c;--color-border:#313a45;--color-text:#f2f4f6;--color-text-muted:#b5bcc5;--color-text-faint:#79808a;--color-text-inverse:#111317;--color-primary:#ffccd8;--color-primary-2:#ffdee7;--color-primary-highlight:#37252d;--shadow-sm:0 1px 2px oklch(0 0 0 / .2);--shadow-md:0 18px 50px oklch(0 0 0 / .35)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0} html{-moz-text-size-adjust:none;-webkit-text-size-adjust:none;text-size-adjust:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;scroll-behavior:smooth;scroll-padding-top:7rem} body{min-height:100dvh;font-family:var(--font-body);font-size:var(--text-base);line-height:1.6;color:var(--color-text);background:var(--color-bg)} img,svg{display:block;max-width:100%;height:auto} a,button,input,textarea,select{font:inherit;color:inherit;transition:background var(--transition),color var(--transition),border-color var(--transition),transform var(--transition),box-shadow var(--transition)} a{text-decoration:none} button{cursor:pointer;border:none;background:none} h1,h2,h3{text-wrap:balance;line-height:.98} p{text-wrap:pretty;max-width:72ch} :focus-visible{outline:2px solid var(--color-text);outline-offset:3px;border-radius:var(--radius-sm)}
+    .skip-link{position:absolute;left:var(--space-4);top:var(--space-4);background:var(--color-text);color:var(--color-text-inverse);padding:var(--space-3) var(--space-4);border-radius:999px;transform:translateY(-200%);z-index:1000}.skip-link:focus{transform:translateY(0)}
+    .container{width:min(calc(100% - 1.5rem),var(--content-default));margin-inline:auto}.container-wide{width:min(calc(100% - 1.5rem),var(--content-wide));margin-inline:auto}
+    .page-grid::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.55;background-image:linear-gradient(to right,transparent calc(100% - 1px),color-mix(in oklab,var(--color-text) 7%,transparent) calc(100% - 1px)),linear-gradient(to bottom,transparent calc(100% - 1px),color-mix(in oklab,var(--color-text) 4%,transparent) calc(100% - 1px));background-size:32px 32px;mask-image:linear-gradient(to bottom,transparent,black 18%,black 82%,transparent)}
+    .site-header{position:sticky;top:0;z-index:100;background:color-mix(in oklab,var(--color-bg) 78%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid color-mix(in oklab,var(--color-text) 10%,transparent)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);min-height:78px}.brand{display:flex;align-items:center;gap:var(--space-3)}.brand-mark{width:42px;height:42px;border-radius:12px;overflow:hidden;background:#000;border:1px solid color-mix(in oklab,var(--color-text) 12%,transparent)}.brand-copy{display:grid;gap:.15rem}.brand-copy strong{font-size:var(--text-sm);font-weight:700}.brand-copy span,.mono{font-family:var(--font-mono);font-size:var(--text-xs);letter-spacing:.12em;text-transform:uppercase;color:var(--color-text-muted)}
+    .header-actions{display:flex;align-items:center;gap:var(--space-2);flex-wrap:wrap}.pill,.theme-toggle,.lang-toggle{min-height:44px;padding:0 var(--space-4);display:inline-flex;align-items:center;justify-content:center;border-radius:999px;border:1px solid color-mix(in oklab,var(--color-text) 12%,transparent);background:color-mix(in oklab,var(--color-surface) 88%,transparent)}.pill:hover,.theme-toggle:hover,.lang-toggle:hover{background:var(--color-surface-2)}.theme-toggle{width:44px;padding:0}.lang-toggle{font-family:var(--font-mono);font-size:var(--text-xs)}
+    .hero{padding:clamp(var(--space-12),12vw,var(--space-24)) 0 var(--space-12)}.hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr);gap:var(--space-8);align-items:end}.hero-eyebrow{display:flex;align-items:center;gap:var(--space-3);font-family:var(--font-mono);font-size:var(--text-xs);letter-spacing:.14em;text-transform:uppercase;color:var(--color-text-muted);margin-bottom:var(--space-6)}.hero-dot{width:10px;height:10px;border-radius:999px;background:var(--color-text)}
+    .hero-title{font-family:var(--font-display);font-size:var(--text-3xl);font-weight:400;letter-spacing:-.05em;max-width:9ch}.hero-title .accent{display:block;color:var(--color-text);position:relative}.hero-title .accent::after{content:"";position:absolute;left:.05em;right:8%;bottom:.13em;height:.22em;background:color-mix(in oklab,var(--color-primary) 75%,transparent);z-index:-1;border-radius:999px}
+    .hero-subtitle{margin-top:var(--space-6);font-size:var(--text-lg);max-width:28ch}.hero-body{margin-top:var(--space-5);color:var(--color-text-muted);max-width:50ch}.hero-actions{display:flex;flex-wrap:wrap;gap:var(--space-3);margin-top:var(--space-8)}.button{min-height:48px;padding:0 1.15rem;border-radius:999px;border:1px solid color-mix(in oklab,var(--color-text) 14%,transparent);display:inline-flex;align-items:center;justify-content:center}.button-primary{background:var(--color-text);border-color:var(--color-text);color:var(--color-text-inverse);box-shadow:var(--shadow-sm)}.button-primary:hover{transform:translateY(-1px);box-shadow:var(--shadow-md)}
+    .hero-side{display:grid;gap:var(--space-4)}.profile-card,.qr-card,.work-card,.service-card,.contact-card,.about-card{background:color-mix(in oklab,var(--color-surface) 92%,transparent);border:1px solid color-mix(in oklab,var(--color-text) 10%,transparent);border-radius:var(--radius-xl);box-shadow:var(--shadow-sm)}.profile-card{padding:var(--space-6);position:relative;overflow:hidden}.profile-card::after{content:"";position:absolute;right:-2rem;bottom:-2rem;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,color-mix(in oklab,var(--color-primary) 70%,transparent),transparent 70%);filter:blur(8px)}.metric-list{display:grid;gap:var(--space-4);position:relative;z-index:1}.metric{display:grid;grid-template-columns:84px 1fr;gap:var(--space-3);padding-bottom:var(--space-4);border-bottom:1px solid color-mix(in oklab,var(--color-text) 10%,transparent)}.metric:last-child{padding-bottom:0;border-bottom:none}.metric strong{font-family:var(--font-mono);font-size:var(--text-xs);color:var(--color-text-muted)}.metric span{font-size:var(--text-sm)}
+    .qr-card{padding:var(--space-5)}.qr-card-grid{display:grid;grid-template-columns:auto 1fr;gap:var(--space-4);align-items:center}.qr-box{width:92px;height:92px;border-radius:18px;border:1px solid color-mix(in oklab,var(--color-text) 10%,transparent);background:linear-gradient(135deg,var(--color-text) 0 18%,var(--color-primary) 18% 36%,var(--color-text) 36% 55%,var(--color-primary) 55% 73%,var(--color-text) 73% 100%);background-size:26px 26px}
+    .section{padding:clamp(var(--space-10),8vw,var(--space-20)) 0;border-top:1px solid color-mix(in oklab,var(--color-text) 10%,transparent)}.section-head{display:grid;grid-template-columns:220px minmax(0,1fr);gap:var(--space-6);align-items:start;margin-bottom:var(--space-8)}.section-label{font-family:var(--font-mono);font-size:var(--text-xs);letter-spacing:.14em;text-transform:uppercase;color:var(--color-text-muted)}.section-title{font-family:var(--font-display);font-size:var(--text-2xl);font-weight:400;letter-spacing:-.04em;max-width:16ch}.section-intro{margin-top:var(--space-3);color:var(--color-text-muted)}
+    .featured-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-5)}.work-card{overflow:hidden}.work-link{display:grid;height:100%}.work-thumb{aspect-ratio:16/11;overflow:hidden;background:var(--color-surface-2)}.work-thumb img{width:100%;height:100%;object-fit:cover;transition:transform 500ms cubic-bezier(.16,1,.3,1),filter 500ms cubic-bezier(.16,1,.3,1)}.work-link:hover .work-thumb img{transform:scale(1.04);filter:contrast(1.02) saturate(1.04)}.work-content{padding:var(--space-5);display:grid;gap:var(--space-3)}.work-topline{display:flex;justify-content:space-between;gap:var(--space-3);align-items:start}.work-index{font-family:var(--font-mono);font-size:var(--text-xs);letter-spacing:.12em;color:var(--color-text-muted)}.work-name{font-size:var(--text-xl);line-height:1.05;letter-spacing:-.03em;font-weight:700}.work-meta{display:flex;flex-wrap:wrap;gap:var(--space-2);color:var(--color-text-muted);font-size:var(--text-sm)}.tag{display:inline-flex;align-items:center;padding:.35rem .72rem;border-radius:999px;background:var(--color-primary-highlight);border:1px solid color-mix(in oklab,var(--color-primary) 45%,transparent);font-family:var(--font-mono);font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.08em}
+    .services-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-4)}.service-card{padding:var(--space-6)}.service-card h3{font-size:var(--text-lg);margin-bottom:var(--space-2)}.service-card p{color:var(--color-text-muted)}
+    .clients-band{padding:var(--space-6);border-radius:var(--radius-xl);border:1px solid color-mix(in oklab,var(--color-text) 10%,transparent);background:linear-gradient(180deg,color-mix(in oklab,var(--color-primary) 18%,var(--color-surface)),var(--color-surface))}.clients-row{display:flex;flex-wrap:wrap;gap:var(--space-3)}.client-pill{padding:.8rem 1rem;border-radius:999px;background:var(--color-bg);border:1px solid color-mix(in oklab,var(--color-text) 10%,transparent);font-size:var(--text-sm)}.clients-row + .clients-row{margin-top:var(--space-4)}
+    .about-grid,.contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.9fr);gap:var(--space-5)}.about-card,.contact-card{padding:var(--space-6)}.about-copy{display:grid;gap:var(--space-4)}.about-copy p,.contact-copy p{color:var(--color-text-muted)}
+    .contact-list{display:grid;gap:var(--space-3);margin-top:var(--space-5)}.contact-item{display:flex;flex-wrap:wrap;gap:var(--space-3);padding-bottom:var(--space-3);border-bottom:1px solid color-mix(in oklab,var(--color-text) 10%,transparent)}.contact-item:last-child{border-bottom:none;padding-bottom:0}.contact-item strong{font-size:var(--text-sm);min-width:88px}
+    .contact-form{display:grid;gap:var(--space-4)}.field{display:grid;gap:var(--space-2)} label{font-size:var(--text-sm);font-weight:600} input,textarea{width:100%;padding:1rem 1rem;border-radius:var(--radius-md);border:1px solid color-mix(in oklab,var(--color-text) 12%,transparent);background:var(--color-bg)} textarea{min-height:140px;resize:vertical} input::placeholder,textarea::placeholder{color:var(--color-text-faint)} .fine{font-size:var(--text-xs);color:var(--color-text-muted)}
+    .mobile-bar{display:none;position:sticky;bottom:0;z-index:90;padding:.7rem;background:color-mix(in oklab,var(--color-bg) 88%,transparent);backdrop-filter:blur(18px);border-top:1px solid color-mix(in oklab,var(--color-text) 10%,transparent)}.mobile-bar-inner{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3)}
+    .footer{padding:var(--space-8) 0 var(--space-10);border-top:1px solid color-mix(in oklab,var(--color-text) 10%,transparent)}.footer-inner{display:flex;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap;font-size:var(--text-sm);color:var(--color-text-muted)}
+    [data-lang]{display:none}[data-lang].active{display:block}
+    @media (max-width:1024px){.hero-grid,.section-head,.about-grid,.contact-grid{grid-template-columns:1fr}.section-head{gap:var(--space-3)}.featured-grid,.services-grid{grid-template-columns:1fr}}
+    @media (max-width:720px){.header-inner{align-items:flex-start;padding-block:var(--space-3)}.header-actions{width:100%}.pill{flex:1 1 auto}.hero{padding-top:var(--space-10)}.hero-title{max-width:10ch;font-size:clamp(2.75rem,12vw,4.9rem)}.hero-subtitle{max-width:20ch}.hero-actions{display:none}.profile-card,.qr-card,.service-card,.about-card,.contact-card,.work-content{padding:var(--space-5)}.mobile-bar{display:block}body{padding-bottom:6.25rem}.qr-card-grid{grid-template-columns:72px 1fr}.qr-box{width:72px;height:72px;border-radius:14px}}
+    @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+  </style>
+</head>
+<body class="page-grid">
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="container-wide header-inner">
+      <a class="brand" href="#top" aria-label="Elijah Künstler home">
+        <span class="brand-mark"><img src="assets/Logo/Logo_iKu_v25-09-08_2_ffccd8.png" alt="Elijah Künstler logo" width="42" height="42" loading="eager"></span>
+        <span class="brand-copy"><strong>Elijah Künstler</strong><span>Strategic Creative Producer</span></span>
+      </a>
+      <div class="header-actions">
+        <a class="pill" href="#work">Work</a>
+        <a class="pill" href="#contact">Contact</a>
+        <button class="lang-toggle" type="button" data-lang-toggle>UA / EN</button>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="hero" id="top">
+      <div class="container-wide hero-grid">
+        <div>
+          <div class="hero-eyebrow"><span class="hero-dot"></span><span>001 — Strategic Creative Producer</span></div>
+          <div data-lang="ua" class="active">
+            <h1 class="hero-title">Elijah <span class="accent">Künstler</span></h1>
+            <p class="hero-subtitle">Стратегічна креативна продюсерка бренд-медіа з фокусом на упаковку, продюсування та direction.</p>
+            <p class="hero-body">Працюю з брендами, агенціями та публічними особистостями на перетині бізнес-задачі, production architecture та виразного візуального результату.</p>
+            <div class="hero-actions"><a class="button button-primary" href="#contact">Обговорити проєкт</a><a class="button" href="#work">Переглянути selected work</a></div>
+          </div>
+          <div data-lang="en">
+            <h1 class="hero-title">Elijah <span class="accent">Künstler</span></h1>
+            <p class="hero-subtitle">Strategic Creative Producer of brand media packaging, production systems and direction.</p>
+            <p class="hero-body">I work with brands, agencies and public figures at the intersection of business goals, production architecture and strong visual execution.</p>
+            <div class="hero-actions"><a class="button button-primary" href="#contact">Discuss a project</a><a class="button" href="#work">View selected work</a></div>
+          </div>
+        </div>
+        <aside class="hero-side">
+          <article class="profile-card">
+            <div class="metric-list">
+              <div class="metric"><strong>Focus</strong><span>Brand media packaging, strategic production, commercials, visual systems.</span></div>
+              <div class="metric"><strong>Clients</strong><span>BMW, United24, Fedoriv Agency, OLX, Укрзалізниця, Vitals.</span></div>
+              <div class="metric"><strong>Mode</strong><span>Full-cycle producer, creative lead, director or external team coordinator.</span></div>
+              <div class="metric"><strong>Base</strong><span>Kyiv, Ukraine.</span></div>
+            </div>
+          </article>
+          <article class="qr-card">
+            <div class="qr-card-grid">
+              <div class="qr-box" aria-hidden="true"></div>
+              <div>
+                <p class="mono">Quick contact</p>
+                <p style="margin-top: .45rem; font-size: var(--text-sm);">Event-ready contact block for fast save after meetings.</p>
+              </div>
+            </div>
+          </article>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="container-wide">
+        <div class="section-head">
+          <p class="section-label">002 — Selected Work</p>
+          <div>
+            <h2 class="section-title">Вибрані кейси з різних типів задач — від artist visual до institutional communication.</h2>
+            <p class="section-intro">Ця структура вже готова під англійську версію: усі ключові блоки подані нейтральною business / strategic мовою.</p>
+          </div>
+        </div>
+        <div class="featured-grid">
+          <article class="work-card">
+            <a class="work-link" href="https://www.ikunstler.com/portfolio/anton-tymoshenko-na-mezhi" target="_blank" rel="noopener noreferrer">
+              <div class="work-thumb"><img src="public_html/iKunstler.com/assets/Pages/Portfolio/project_cover/Антон_Тимошенко-На_межі.jpg" alt="Preview of Anton Tymoshenko project" width="640" height="440" loading="lazy"></div>
+              <div class="work-content"><div class="work-topline"><span class="work-index">01</span><span class="tag">Artist visual</span></div><h3 class="work-name">На межі</h3><p class="work-meta"><span>Anton Tymoshenko</span><span>•</span><span>Music video / media identity</span></p></div>
+            </a>
+          </article>
+          <article class="work-card">
+            <a class="work-link" href="https://www.ikunstler.com/portfolio/ukraine-restoration-fund-promo-presentation" target="_blank" rel="noopener noreferrer">
+              <div class="work-thumb"><img src="public_html/iKunstler.com/assets/Pages/Portfolio/project_cover/Фонд_Відновлення_України.jpg" alt="Presentation style preview for institutional promo work" width="640" height="440" loading="lazy"></div>
+              <div class="work-content"><div class="work-topline"><span class="work-index">02</span><span class="tag">Institutional</span></div><h3 class="work-name">Ukraine Restoration Fund</h3><p class="work-meta"><span>Promo presentation</span><span>•</span><span>Institutional communication</span></p></div>
+            </a>
+          </article>
+          <article class="work-card">
+            <a class="work-link" href="https://www.ikunstler.com/portfolio/bmw-%D1%83%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0" target="_blank" rel="noopener noreferrer">
+              <div class="work-thumb"><img src="public_html/iKunstler.com/assets/Pages/Portfolio/project_cover/BMW_АВТ_Баварія_Київ.jpg" alt="Preview image representing BMW Ukraine commercial work" width="640" height="440" loading="lazy"></div>
+              <div class="work-content"><div class="work-topline"><span class="work-index">03</span><span class="tag">Commercial</span></div><h3 class="work-name">BMW Ukraine</h3><p class="work-meta"><span>Automotive brand media</span><span>•</span><span>Commercial direction</span></p></div>
+            </a>
+          </article>
+          <article class="work-card">
+            <a class="work-link" href="https://www.ikunstler.com/portfolio/anantavati" target="_blank" rel="noopener noreferrer">
+              <div class="work-thumb"><img src="public_html/iKunstler.com/assets/Pages/Portfolio/project_cover/Ananta_medicare-Анантаваті.png" alt="Preview image representing Anantavati premium visual work" width="640" height="440" loading="lazy"></div>
+              <div class="work-content"><div class="work-topline"><span class="work-index">04</span><span class="tag">Premium visual</span></div><h3 class="work-name">Anantavati</h3><p class="work-meta"><span>Lifestyle</span><span>•</span><span>Brand atmosphere</span></p></div>
+            </a>
+          </article>
+          <article class="work-card">
+            <a class="work-link" href="https://www.ikunstler.com/portfolio/vitals-%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D1%96%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8" target="_blank" rel="noopener noreferrer">
+              <div class="work-thumb"><img src="public_html/iKunstler.com/assets/Pages/Portfolio/project_cover/Vitals_інструменти.jpg" alt="Preview image representing Vitals product commercial work" width="640" height="440" loading="lazy"></div>
+              <div class="work-content"><div class="work-topline"><span class="work-index">05</span><span class="tag">Product commercial</span></div><h3 class="work-name">Vitals</h3><p class="work-meta"><span>Mass-market segment</span><span>•</span><span>Product communication</span></p></div>
+            </a>
+          </article>
+          <article class="work-card">
+            <a class="work-link" href="https://www.youtube.com/watch?v=10Stp4-D-Bg" target="_blank" rel="noopener noreferrer">
+              <div class="work-thumb"><img src="public_html/iKunstler.com/assets/Pages/Portfolio/project_cover/Ми_OLX.jpg" alt="YouTube project preview" width="640" height="440" loading="lazy"></div>
+              <div class="work-content"><div class="work-topline"><span class="work-index">06</span><span class="tag">Video</span></div><h3 class="work-name">Ми OLX</h3><p class="work-meta"><span>Direct link</span><span>•</span><span>Fast-access viewing</span></p></div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container-wide">
+        <div class="section-head">
+          <p class="section-label">003 — Services</p>
+          <div>
+            <h2 class="section-title">Стратегія, продюсування, direction та візуальна упаковка — як єдина система.</h2>
+            <p class="section-intro">Тексти свідомо побудовані так, щоб легко перемикатися між українською та англійською без втрати позиціонування.</p>
+          </div>
+        </div>
+        <div class="services-grid">
+          <article class="service-card"><h3>Creative Strategy</h3><p>Формую структуру комунікації, creative approach та рамку задачі ще до запуску виробництва.</p></article>
+          <article class="service-card"><h3>Brand Media Packaging</h3><p>Працюю з візуальною упаковкою бізнесу через відео, AI-assisted assets та цілісні медіа-рішення.</p></article>
+          <article class="service-card"><h3>Producing & Direction</h3><p>Веду повний цикл або окремі блоки: препродакшн, команда, зйомка, монтаж, delivery.</p></article>
+          <article class="service-card"><h3>Commercial & Public Figure Work</h3><p>Рекламні ролики, artist visuals, презентаційні відео та медіа-пакування для особистих брендів.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container-wide">
+        <div class="section-head">
+          <p class="section-label">004 — Selected Clients</p>
+          <div><h2 class="section-title">Бренди, інституції та команди, з якими вже є спільний досвід роботи.</h2></div>
+        </div>
+        <div class="clients-band">
+          <div class="clients-row"><span class="client-pill">BMW</span><span class="client-pill">United24</span><span class="client-pill">Fedoriv Agency</span><span class="client-pill">OLX</span><span class="client-pill">Укрзалізниця</span><span class="client-pill">Vitals</span></div>
+          <div class="clients-row"><span class="client-pill">Gres Todorchuk</span><span class="client-pill">Ukraїner</span><span class="client-pill">skinOrmil</span><span class="client-pill">Anantavati</span><span class="client-pill">Підпільний стендап</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container-wide">
+        <div class="section-head">
+          <p class="section-label">005 — Approach</p>
+          <div><h2 class="section-title">Я заходжу в проєкт через бізнес-контекст, а не лише через виробництво красивого кадру.</h2></div>
+        </div>
+        <div class="about-grid">
+          <article class="about-card about-copy">
+            <p>Я стратегічна креативна продюсерка з бекграундом у режисурі, менеджменті та візуальних мистецтвах. Поєдную business thinking, production discipline і сильний creative direction.</p>
+            <p>Мій процес починається з розуміння задачі: що саме бренд хоче змінити, кому він говорить і яким способом контент повинен спрацювати. Лише після цього будується production architecture.</p>
+            <p>Під кожен проєкт я масштабую команду окремо: можу бути lead producer, director або координувати зовнішніх підрядників, якщо саме це найкраще працює для задачі.</p>
+          </article>
+          <aside class="about-card">
+            <div class="metric-list">
+              <div class="metric"><strong>Role</strong><span>Strategic producer / creative lead / director.</span></div>
+              <div class="metric"><strong>Method</strong><span>Research → positioning → production architecture → execution.</span></div>
+              <div class="metric"><strong>Stack</strong><span>Video production, editing, AI tools, team coordination, visual packaging.</span></div>
+              <div class="metric"><strong>Outcome</strong><span>Контент, що працює на бренд, а не просто існує як окремий ролик.</span></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container-wide">
+        <div class="section-head">
+          <p class="section-label">006 — Contact</p>
+          <div><h2 class="section-title">Маєте проєкт, запуск, кампанію або візуальну задачу?</h2><p class="section-intro">Цей блок уже підготовлений для швидкого використання з телефону після особистого знайомства.</p></div>
+        </div>
+        <div class="contact-grid">
+          <article class="contact-card contact-copy">
+            <p>Пишіть напряму або лишайте короткий запит. Для event-знайомств і мобільного перегляду тут залишена максимально коротка структура контакту.</p>
+            <div class="contact-list">
+              <div class="contact-item"><strong>Phone</strong><a href="tel:+380992225513">+380 (99) 222 55 13</a></div>
+              <div class="contact-item"><strong>Email</strong><a href="mailto:ikunstler.group@gmail.com">ikunstler.group@gmail.com</a></div>
+              <div class="contact-item"><strong>Instagram</strong><a href="https://instagram.com/iku.group" target="_blank" rel="noopener noreferrer">instagram.com/iku.group</a></div>
+              <div class="contact-item"><strong>Formats</strong><span>WhatsApp, FaceTime, email, Instagram DM.</span></div>
+            </div>
+          </article>
+          <article class="contact-card">
+            <form class="contact-form" action="mailto:ikunstler.group@gmail.com" method="post" enctype="text/plain">
+              <div class="field"><label for="name">Ім'я</label><input id="name" name="name" type="text" placeholder="Ваше ім'я" required></div>
+              <div class="field"><label for="company">Компанія / проєкт</label><input id="company" name="company" type="text" placeholder="Назва компанії або проєкту"></div>
+              <div class="field"><label for="contact-method">Email або Telegram</label><input id="contact-method" name="contact-method" type="text" placeholder="Як із вами зв'язатися" required></div>
+              <div class="field"><label for="brief">Коротко про задачу</label><textarea id="brief" name="brief" placeholder="Що потрібно створити, для кого і в які терміни"></textarea></div>
+              <button class="button button-primary" type="submit">Надіслати запит</button>
+              <p class="fine">Форма відкриє ваш email-клієнт із підготовленим листом. Для швидшого контакту варто також використовувати прямі канали вище.</p>
+            </form>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="mobile-bar">
+    <div class="container mobile-bar-inner">
+      <a class="button button-primary" href="#contact">Contact</a>
+      <a class="button" href="#work">Work</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container-wide footer-inner"><p>Elijah Künstler / iKu Group</p><p>Strategic Creative Producer of Brand Media Packaging</p></div>
+  </footer>
+
+  <script>
+    (function(){
+      const root=document.documentElement;
+      const themeBtn=document.querySelector('[data-theme-toggle]');
+      let theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+      root.setAttribute('data-theme',theme);
+      const renderTheme=()=>{themeBtn.innerHTML=theme==='dark'?'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>':'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';};
+      renderTheme();
+      themeBtn.addEventListener('click',()=>{theme=theme==='dark'?'light':'dark';root.setAttribute('data-theme',theme);renderTheme();});
+      const langBtn=document.querySelector('[data-lang-toggle]');
+      let lang='ua';
+      const blocks=document.querySelectorAll('[data-lang]');
+      const renderLang=()=>{blocks.forEach(el=>el.classList.toggle('active',el.dataset.lang===lang));langBtn.textContent=lang==='ua'?'UA / EN':'EN / UA';document.documentElement.lang=lang==='ua'?'uk':'en';};
+      langBtn.addEventListener('click',()=>{lang=lang==='ua'?'en':'ua';renderLang();});
+      renderLang();
+    })();
+  </script>
+</body>
+</html>
