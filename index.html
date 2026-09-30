@@ -143,6 +143,23 @@
             filter: blur(8px); opacity: 0.85; animation: rotateGlow 6s linear infinite;
             z-index: 0; pointer-events: none;
         }
+        .qr-container {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .qr-glow-bg {
+            position: absolute;
+            inset: -6px;
+            border-radius: 24px;
+            background: linear-gradient(45deg, #ff007f, #ff7700, #ff00ea, #00d2ff);
+            filter: blur(12px);
+            opacity: 0.9;
+            animation: rotateGlow 6s linear infinite;
+            z-index: 0;
+            pointer-events: none;
+        }
         @keyframes rotateGlow {
             0% { filter: hue-rotate(0deg) blur(8px); }
             100% { filter: hue-rotate(360deg) blur(8px); }
@@ -166,7 +183,7 @@
     <div class="bg-wrapper bg-liquid" id="parallaxBg"></div>
     <div class="bg-dark-overlay"></div>
 
-    <main class="w-full max-w-[430px] min-h-screen md:min-h-[880px] md:max-h-[920px] md:border-[10px] md:border-slate-900/20 md:rounded-[50px] shadow-2xl flex flex-col justify-between p-5 relative overflow-y-auto backdrop-blur-sm z-10">
+    <main id="mainContainer" class="w-full max-w-[430px] min-h-screen md:min-h-[880px] md:max-h-[920px] md:border-[10px] md:border-slate-900/20 md:rounded-[50px] shadow-2xl flex flex-col justify-between p-5 relative overflow-y-auto backdrop-blur-sm z-10">
 
         <!-- Header -->
         <header class="w-full flex justify-between items-center text-xs font-semibold pt-1 pb-3 px-2 z-20">
@@ -263,15 +280,15 @@
                 <h2 class="text-base font-bold text-adaptive-main mb-3">Vibe Apps Gallery</h2>
 
                 <div class="grid-icons-layout">
-                    <!-- Icon 1: Code Brackets SVG -->
-                    <div class="liquid-glass-button rounded-[20px] w-full aspect-square flex justify-center items-center p-2 pointer-events-none">
+                    <!-- Icon 1: Code Brackets SVG (Without background box) -->
+                    <div class="w-full aspect-square flex justify-center items-center p-2 pointer-events-none">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="theme-svg-icon w-7 h-7">
                             <path fill="currentColor" d="M24 10.935v2.131l-8 3.947v-2.23l5.64-2.783-5.64-2.79v-2.223l8 3.948zm-16 3.848l-5.64-2.783 5.64-2.79v-2.223l-8 3.948v2.131l8 3.947v-2.23zm7.047-10.783h-2.078l-4.011 16h2.073l4.016-16z"/>
                         </svg>
                     </div>
 
-                    <!-- Icon 2: Layout / Window Grid SVG -->
-                    <div class="liquid-glass-button rounded-[20px] w-full aspect-square flex justify-center items-center p-2 pointer-events-none">
+                    <!-- Icon 2: Layout / Window Grid SVG (Without background box) -->
+                    <div class="w-full aspect-square flex justify-center items-center p-2 pointer-events-none">
                         <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="theme-svg-icon w-7 h-7">
                             <path fill="currentColor" d="m21 4c0-.478-.379-1-1-1h-16c-.62 0-1 .519-1 1v16c0 .621.52 1 1 1h16c.478 0 1-.379 1-1zm-16.5.5h15v15h-15zm6.75 9.25v3.25c0 .53-.47 1-1 1h-3.25c-.53 0-1-.47-1-1v-3.25c0-.53.47-1 1-1h3.25c.53 0 1 .47 1 1zm0-6.75v3.25c0 .53-.47 1-1 1h-3.25c-.53 0-1-.47-1-1v-3.25c0-.53.47-1 1-1h3.25c.53 0 1 .47 1 1zm6.75 0v3.25c0 .53-.47 1-1 1h-3.25c-.53 0-1-.47-1-1v-3.25c0-.53.47-1 1-1h3.25c.53 0 1 .47 1 1z" fill-rule="nonzero"/>
                         </svg>
@@ -312,7 +329,7 @@
         <!-- Vibe Apps Gallery View (Complete with all 6 Applications) -->
         <div id="appsGalleryView" class="hidden flex-1 flex-col justify-start space-y-4 z-10 py-1">
             <div class="flex items-center justify-between pb-2 border-b border-white/20">
-                <button onclick="switchTab('main')" class="liquid-glass-button px-3 py-1.5 text-xs font-bold text-adaptive-main flex items-center">
+                <button onclick="switchTab('main')" class="liquid-glass-button rounded-full px-4 py-1.5 text-xs font-bold text-adaptive-main flex items-center shadow-sm">
                     <i class="fa-solid fa-chevron-left mr-1.5"></i> Back
                 </button>
                 <h2 class="text-base font-bold text-adaptive-main">Vibe Apps Gallery</h2>
@@ -333,12 +350,12 @@
                         <p class="text-[10px] text-adaptive-sub">Clinical Psychodiagnostic Complex</p>
                     </div>
                 </div>
-                <p class="text-xs text-adaptive-sub leading-relaxed mb-3 bg-white/10 p-2.5 rounded-xl border border-white/20 backdrop-blur-md">
+                <p class="text-xs text-adaptive-sub leading-relaxed mb-3">
                     Autonomous psychodiagnostic screening tool featuring GAD-7, PCL-M, PHQ-9, and DES-II scales with zero-knowledge offline client scoring and print/PDF reporting.
                 </p>
                 <a href="https://ikunstler-maker.github.io/TriScreen/" target="_blank" rel="noopener noreferrer" 
-                   class="liquid-glass-button w-full py-2.5 flex items-center justify-center space-x-2 text-adaptive-main font-bold hover:bg-white/20 text-xs">
-                    <span>Launch TriScreen</span>
+                   class="liquid-glass-button rounded-2xl w-full py-2.5 flex items-center justify-center space-x-2 text-adaptive-main font-bold hover:bg-white/20 text-xs">
+                    <span>Open</span>
                     <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                 </a>
             </div>
@@ -354,12 +371,12 @@
                         <p class="text-[10px] text-adaptive-sub">Vector QR Code Generator</p>
                     </div>
                 </div>
-                <p class="text-xs text-adaptive-sub leading-relaxed mb-3 bg-white/10 p-2.5 rounded-xl border border-white/20 backdrop-blur-md">
+                <p class="text-xs text-adaptive-sub leading-relaxed mb-3">
                     Serverless artistic QR code studio with custom aesthetic visual presets, error-correction tuning, and instant vector SVG and PNG output.
                 </p>
                 <a href="https://ikunstler-maker.github.io/ArtQR/" target="_blank" rel="noopener noreferrer" 
-                   class="liquid-glass-button w-full py-2.5 flex items-center justify-center space-x-2 text-adaptive-main font-bold hover:bg-white/20 text-xs">
-                    <span>Launch ArtQR</span>
+                   class="liquid-glass-button rounded-2xl w-full py-2.5 flex items-center justify-center space-x-2 text-adaptive-main font-bold hover:bg-white/20 text-xs">
+                    <span>Open</span>
                     <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                 </a>
             </div>
@@ -375,12 +392,12 @@
                         <p class="text-[10px] text-adaptive-sub">Personal Energy Budgeting Diary</p>
                     </div>
                 </div>
-                <p class="text-xs text-adaptive-sub leading-relaxed mb-3 bg-white/10 p-2.5 rounded-xl border border-white/20 backdrop-blur-md">
+                <p class="text-xs text-adaptive-sub leading-relaxed mb-3">
                     Psychological energy investment and return tracker. Identify draining tasks, record replenishing actions, and prevent burnout through CBT balance logs.
                 </p>
                 <a href="https://ikunstler-maker.github.io/EntroLog/" target="_blank" rel="noopener noreferrer" 
-                   class="liquid-glass-button w-full py-2.5 flex items-center justify-center space-x-2 text-adaptive-main font-bold hover:bg-white/20 text-xs">
-                    <span>Launch EntroLog</span>
+                   class="liquid-glass-button rounded-2xl w-full py-2.5 flex items-center justify-center space-x-2 text-adaptive-main font-bold hover:bg-white/20 text-xs">
+                    <span>Open</span>
                     <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                 </a>
             </div>
@@ -396,12 +413,12 @@
                         <p class="text-[10px] text-adaptive-sub">Cognitive-Behavioral Reflection</p>
                     </div>
                 </div>
-                <p class="text-xs text-adaptive-sub leading-relaxed mb-3 bg-white/10 p-2.5 rounded-xl border border-white/20 backdrop-blur-md">
+                <p class="text-xs text-adaptive-sub leading-relaxed mb-3">
                     Mobile-optimized CBT emotional reflection tool with voice dictation input, automatic session timestamps, and clean Markdown/PDF export.
                 </p>
                 <a href="https://ikunstler-maker.github.io/Emotion-Journal/" target="_blank" rel="noopener noreferrer" 
-                   class="liquid-glass-button w-full py-2.5 flex items-center justify-center space-x-2 text-adaptive-main font-bold hover:bg-white/20 text-xs">
-                    <span>Launch Emotion Journal</span>
+                   class="liquid-glass-button rounded-2xl w-full py-2.5 flex items-center justify-center space-x-2 text-adaptive-main font-bold hover:bg-white/20 text-xs">
+                    <span>Open</span>
                     <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                 </a>
             </div>
@@ -417,12 +434,12 @@
                         <p class="text-[10px] text-adaptive-sub">Resume & CV Matching Intelligence</p>
                     </div>
                 </div>
-                <p class="text-xs text-adaptive-sub leading-relaxed mb-3 bg-white/10 p-2.5 rounded-xl border border-white/20 backdrop-blur-md">
+                <p class="text-xs text-adaptive-sub leading-relaxed mb-3">
                     Algorithmic CV analyzer optimizing resumes for Applicant Tracking Systems by discovering missing keywords and evaluating role-specific match scores.
                 </p>
                 <a href="https://ikunstler-maker.github.io/ATSOptimizer/" target="_blank" rel="noopener noreferrer" 
-                   class="liquid-glass-button w-full py-2.5 flex items-center justify-center space-x-2 text-adaptive-main font-bold hover:bg-white/20 text-xs">
-                    <span>Launch ATS Optimizer</span>
+                   class="liquid-glass-button rounded-2xl w-full py-2.5 flex items-center justify-center space-x-2 text-adaptive-main font-bold hover:bg-white/20 text-xs">
+                    <span>Open</span>
                     <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                 </a>
             </div>
@@ -438,12 +455,12 @@
                         <p class="text-[10px] text-adaptive-sub">Lossless Audio-to-Pixel Codec</p>
                     </div>
                 </div>
-                <p class="text-xs text-adaptive-sub leading-relaxed mb-3 bg-white/10 p-2.5 rounded-xl border border-white/20 backdrop-blur-md">
+                <p class="text-xs text-adaptive-sub leading-relaxed mb-3">
                     Encodes raw 16-bit PCM voice recordings into RGB pixel matrices and decodes them back with zero phase distortion and complete metadata recovery.
                 </p>
                 <a href="https://ikunstler-maker.github.io/AudioMatrix-Encoder/" target="_blank" rel="noopener noreferrer" 
-                   class="liquid-glass-button w-full py-2.5 flex items-center justify-center space-x-2 text-adaptive-main font-bold hover:bg-white/20 text-xs">
-                    <span>Launch AudioMatrix Encoder</span>
+                   class="liquid-glass-button rounded-2xl w-full py-2.5 flex items-center justify-center space-x-2 text-adaptive-main font-bold hover:bg-white/20 text-xs">
+                    <span>Open</span>
                     <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                 </a>
             </div>
@@ -467,20 +484,16 @@
                 <i class="fa-solid fa-xmark text-sm"></i>
             </button>
             <h3 class="text-xl font-bold text-adaptive-main mb-1 pt-1">Elijah Künstler</h3>
-            <p class="text-[10px] text-adaptive-sub mb-3 tracking-tight opacity-90 break-all px-2">ikunstler-maker.github.io/visitcard</p>
+            <p class="text-[10px] text-adaptive-sub mb-4 tracking-tight opacity-90 break-all px-2">ikunstler-maker.github.io/visitcard</p>
 
-            <!-- Custom QR Image from specified repository URL -->
-            <div class="my-2 p-2 rounded-2xl bg-white/90 dark:bg-slate-900/90 border border-white/30 shadow-lg flex items-center justify-center">
-                <img src="https://raw.githubusercontent.com/ikunstler-maker/iKunstler/refs/heads/main/QR-ikunstler-visitcard.jpg" 
-                     alt="Elijah Künstler Visit Card QR" 
-                     class="w-48 h-48 object-contain rounded-xl shadow-sm">
+            <div class="qr-container my-2">
+                <div class="qr-glow-bg"></div>
+                <div class="p-2 rounded-2xl bg-white/95 dark:bg-slate-900/95 border border-white/40 shadow-xl flex items-center justify-center relative z-10">
+                    <img src="https://raw.githubusercontent.com/ikunstler-maker/iKunstler/refs/heads/main/QR-ikunstler-visitcard.jpg" 
+                         alt="Elijah Künstler Visit Card QR" 
+                         class="w-48 h-48 object-contain rounded-xl shadow-sm">
+                </div>
             </div>
-
-            <a href="https://ikunstler-maker.github.io/visitcard/" target="_blank" rel="noopener noreferrer" 
-               class="text-[10px] text-adaptive-sub mt-3 tracking-widest uppercase font-bold hover:underline flex items-center">
-                <span>iKünstler Group</span>
-                <i class="fa-solid fa-arrow-up-right-from-square text-[8px] ml-1.5"></i>
-            </a>
         </div>
     </div>
 
@@ -576,12 +589,12 @@
             if (parallaxBg) parallaxBg.style.transform = `translate(${shiftX}px, ${shiftY}px) scale(1.05)`;
         });
 
-        // View Navigation
         function switchTab(tabName) {
             const mainView = document.getElementById('appViewport');
             const appsView = document.getElementById('appsGalleryView');
             const dotMain = document.getElementById('dotMain');
             const dotApps = document.getElementById('dotApps');
+            const mainContainer = document.getElementById('mainContainer');
 
             if (tabName === 'apps') {
                 mainView.classList.add('hidden'); appsView.classList.remove('hidden'); appsView.classList.add('flex');
@@ -592,6 +605,10 @@
                 dotMain.className = "w-2.5 h-2.5 rounded-full bg-slate-400 transition-all duration-300";
                 dotApps.className = "w-2.5 h-2.5 rounded-full bg-slate-600/50 transition-all duration-300";
             }
+
+            // Always scroll to the top of the container and window on view switch
+            if (mainContainer) mainContainer.scrollTop = 0;
+            window.scrollTo({ top: 0, behavior: 'instant' });
         }
     </script>
 </body>
